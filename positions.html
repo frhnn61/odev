@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> /* position  sayfamızdaki elementlerin pozisyonlarının düzenlendiği özelliktir */
+        .redbox{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            z-index: 1;
+        }   /* burlarda margin kullanırsak bütün elemntlere etki eder ama sadece biri için yapacaksak margin kullanmadan yön belirtilir*/
+        .yellowbox{
+            position: relative; /* relative: görecelidir bir hyerde konum var onu bazalarak ilerler sayfa başından değil
+            static: akışa göre sayfayı yerleştirir  absolute: mutlak demektir 0'a 0 noktadan esas alarak başlar
+           fixed: sabitlenmiş olacak hareket çubuğu olsa bile yerinden kıpırdamayacak  
+           Sticky :Yapışkan öğe göreceli ve sabit, kaydırma konumuna bağlı arasında geçiş yapar. Oluşturulan eleman kaydırma çubuğu gelene kadar position:relative gibi davranır, kaydırma çubuğu geldikten sonra position:fixed gibi davranır. */
+            left: 50px;
+            top: 50px; /* top yukarıdan boşluk verir ama seçili olana hepsine vermesi için margin kullanılmalı*/
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            z-index: -1;/*üstte yada önde olmasını istediğimiz bir şey varsa iki öğemizede z-index verilir hangisinin değeri büyükse o önde gözükür*/
+        }
+    </style>
+</head>
+<body>
+    <div class="redbox">
+
+    </div>
+
+    <div class="redbox">
+        
+    </div>
+
+
+    <div class="yellowbox">
+        
+    </div>
+
+
+    <div class="redbox">
+        
+    </div>
+
+
+    <div class="redbox">
+        
+    </div>
+
+
+</body>
+</html>

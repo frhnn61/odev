@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tbox{
+            width: 120px;
+            height: 25px;
+        }
+        .tbox:hover{
+            background-color: red;
+        }
+        .tbox:focus{
+            background-color: green;
+
+        }
+        .pclass{
+            color: orange;
+        }
+        .pclass::first-line{ /* line satıra ekti ediyor*/
+            color: greenyellow;
+        }
+        .pclass::first-letter{ /* letter ilk harfe etki eder */
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    
+   <input type="text" class="tbox">
+
+   <p class="pclass">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur 
+    earum debitis nulla ut unde error quae excepturi molestiae cumque 
+    nihil doloribus doloremque velit, quos facilis quibusdam pariatur 
+    aliquam harum labore.
+   </p>
+
+
+</body>
+</html>
